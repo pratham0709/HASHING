@@ -24,6 +24,7 @@ int main()
     
     unordered_set<int> :: iterator it;
     
+    s.erase(5);
     for(it = s.begin(); it!= s.end(); it++){
         cout<<*it<<" ";
     }
