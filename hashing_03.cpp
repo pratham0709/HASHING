@@ -1,31 +1,36 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    unordered_set<int>s;
-    
+    unordered_set <int> s; //you can use unordered_multiset if you want to store any int more than once
+    //set<int>s ==> arrenges values in asending order
     s.insert(5);
-    s.insert(6);
-    s.insert(1);
+    s.insert(8);
     s.insert(3);
-    s.insert(5);
+    s.insert(8);
     
+    //s.begin() ==>Address of the first element of unordered_set
+    //s.end()  ==> Address of last element+one
+    //s.end()-1 ==> Address of last element
     
-    int search = 6;
+    int a = 2;
     
-    if(s.find(search)==s.end()){
-        cout<<search<<" is not present "<<endl;
+    if(s.find(a) == s.end()){
+        cout<<"Given int is not present"<<endl;
     }
     else{
-        cout<<search<<" is present"<<endl;
+        cout<<"Yeah I am here"<<endl;
     }
     
-    unordered_set<int> :: iterator it;
+    unordered_set <int> :: iterator it;
     
-    s.erase(5);
-    for(it = s.begin(); it!= s.end(); it++){
+    //s.erase(8);
+    
+    for(it = s.begin(); it!=s.end(); it++){
         cout<<*it<<" ";
     }
+    
+    
+    
 }
